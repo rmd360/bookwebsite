@@ -8,7 +8,7 @@ const Books = () => {
   useEffect(() => {
     const fetchBooks = async () => {
       const res = await axios.get(
-        `https://api.nytimes.com/svc/books/v3/lists/full-overview.json?api-key=y0IRShljc4v1wwXarla7ovvYZMpo1WtH`)
+        `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=y0IRShljc4v1wwXarla7ovvYZMpo1WtH`)
       setBooks(res.data.results.books)
       console.log(res.data.results.books)
     }
